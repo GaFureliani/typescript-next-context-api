@@ -1,6 +1,8 @@
 import { createContext, ReactNode, useState } from "react";
 
-export const counterContext = createContext<[number, (arg: number)=> void]>([0, (arg:number) => {}])
+type initialState = [number, (arg: number)=> void]
+
+export const counterContext = createContext<initialState>([0, (arg:number) => {}])
 
 interface props {
     children: ReactNode
